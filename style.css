@@ -1,0 +1,127 @@
+* {
+  margin: 0px;
+  box-sizing: content-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./machu-picchu-3840x2160-5k-4k-wallpaper-peru-mountains-clouds-hills-5361.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.button-with-border {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.button-no-border {
+  padding: 5px 10px;
+  border: none;
+  background-color: none;
+}
+.h1 {
+  font-size: large;
+  font-weight: 800px;
+}
+.w-10 {
+  width: 10%;
+}
+.w-80 {
+  width: 80%;
+}
+.todo-container {
+  width: 50%;
+  height: 220px;
+  /* border: 3px solid black; */
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.modalContainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.show {
+  display: flex;
+}
+.boardOne {
+  height: fit-content;
+  background-color: #ebecf0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 1/2;
+  padding: 10px;
+  gap: 5px;
+}
+.boardTwo {
+  height: fit-content;
+  background-color: #ebecf0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 2/3;
+  padding: 10px;
+  gap: 5px;
+}
+.boardThree {
+  height: fit-content;
+
+  background-color: #ebecf0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 3/4;
+  padding: 10px;
+  gap: 5px;
+}
+.boardFour {
+  height: fit-content;
+
+  background-color: #ebecf0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 4/5;
+  padding: 10px;
+  gap: 5px;
+}
+.header {
+  padding: 5px;
+}
+.body {
+  width: 90%;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+}
+.footer {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.body-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: content-box;
+  gap: 10px;
+}

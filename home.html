@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="todo-container">
+      <div class="boardOne" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="header">
+          <h2>To do</h2>
+          <div class="h1"></div>
+        </div>
+        <div
+          class="body"
+          draggable="true"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <div class="w-10">
+            <img src="./check-circle-svgrepo-com.svg" width="30px" alt="" />
+          </div>
+          <div class="body-content w-80">
+            <h3>Todo</h3>
+            <p>This is todo card</p>
+            <button class="button-with-border">Hight</button>
+          </div>
+          <div class="w-10">
+            <img src="./cancel1-svgrepo-com.svg" width="30px" alt="" />
+            <img src="./edit-3-svgrepo-com.svg" width="30px" alt="" />
+          </div>
+        </div>
+        <div class="footer">
+          <div>+</div>
+          <button class="button-no-border" onclick="show()">Add card</button>
+        </div>
+      </div>
+      <div class="boardTwo">
+        <div class="header">
+          <h2>In progress</h2>
+          <div class="h1"></div>
+        </div>
+        <div
+          id="drop-2"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class="footer">
+          <div>+</div>
+          <button onclick="">Add card</button>
+        </div>
+      </div>
+      <div class="boardThree">
+        <div class="header">
+          <h2>Stuck</h2>
+          <div class="h1"></div>
+        </div>
+        <div
+          id="drop-2"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class="footer">
+          <div>+</div>
+          <div>Add card</div>
+        </div>
+      </div>
+      <div class="boardFour">
+        <div class="header">
+          <h2>In progress</h2>
+          <div class="h1"></div>
+        </div>
+        <div
+          id="drop-2"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <div class="footer">
+          <div>+</div>
+          <div>Add card</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

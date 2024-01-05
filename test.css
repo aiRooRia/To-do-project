@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background-image: url(./machu-picchu-3840x2160-5k-4k-wallpaper-peru-mountains-clouds-hills-5361.jpg);
+  background-size: cover;
+}
+/* /////////////DISPLAY/////////// */
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-start {
+  align-items: flex-start;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-30 {
+  gap: 30px;
+}
+.w-100-percent {
+  width: 100%;
+}
+.h-30 {
+  height: 30px;
+}
+.h-35 {
+  height: 35px;
+}
+.h-150 {
+  height: 150px;
+}
+.border-black {
+  border: 1px solid black;
+}
+.button-black {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.button-option {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+.button-list {
+  border: none;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-cover {
+  background-size: cover;
+}
+.padding-10 {
+  padding: 10px;
+}
+.border-raduis-10 {
+  border-radius: 10px;
+}
+.add {
+  background-color: rgb(215, 213, 213);
+
+  padding: 5px 10px;
+}
+.show {
+  display: flex !important;
+}
+.remove {
+  display: none !important;
+}
+.container-01 {
+  width: 70%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.list-01 {
+  grid-column: 1/2;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(238, 238, 238);
+  gap: 10px;
+}
+.list-02 {
+  grid-column: 2/3;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(238, 238, 238);
+  gap: 10px;
+}
+.list-03 {
+  grid-column: 3/4;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(238, 238, 238);
+  gap: 10px;
+}
+.list-04 {
+  grid-column: 4/5;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgb(238, 238, 238);
+  gap: 10px;
+}
+
+.reciveDrop-01 {
+  max-height: fit-content;
+  min-height: 30px;
+  width: 95%;
+  display: flex;
+}
+.modalContainer {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.643);
+}
+.modal-mini-container {
+  width: 700px;
+  height: fit-content;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+#box {
+  height: fit-content;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}

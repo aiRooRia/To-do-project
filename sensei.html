@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 500px;
+        border: 1px solid gray;
+      }
+      .box {
+        width: 120px;
+        border-radius: 8px;
+        background-color: rgb(255, 170, 170);
+      }
+      .flex {
+        display: flex;
+        gap: 20px;
+      }
+      .modalContainer {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .modal {
+        width: 200px;
+        background-color: white;
+      }
+      .show {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <!-- ehnii container -->
+      <div
+        class="container flex"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+        id="container-1"
+      ></div>
+      <!-- 2 dahi container-->
+      <div
+        class="container flex"
+        ondragover="allowDrop(event)"
+        ondrop="drop(event)"
+        id="container-2"
+      ></div>
+      <!-- modal gargah -->
+      <button onclick="show()" id="add-todo-button">Add todo</button>
+      <!-- modal heseg -->
+      <div class="modalContainer">
+        <div class="modal">
+          <p>Title</p>
+          <input id="title-input" type="text" />
+          <p>description</p>
+          <input id="description-input" type="text" />
+          <p>status</p>
+          <input id="status-input" type="text" />
+          <p>priority</p>
+          <input id="priority-input" type="text" />
+          <button onclick="addTodo()">Submit</button>
+          <button onclick="hide()">hide</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // huuramch todo data
+      const boxArray = [
+        {
+          title: "Read book",
+          Description: "Huuhdin nom olj unshih",
+          Status: "todo",
+          Priority: "low",
+        },
+        {
+          title: "Code",
+          Description: "SPOJ 10 bodlogo",
+          Status: "doing",
+          Priority: "high",
+        },
+        {
+          title: "Sleep",
+          Description: "8n tsag untah",
+          Status: "todo",
+          Priority: "high",
+        },
+      ];
+      // array dahi elementudig niilulj boxnud bolgod container-1 ruu hiij bga
+      const render = () => {
+        let boxString = "";
+        boxArray.forEach((el, i) => {
+          boxString += `<div ondragstart="drag(event)" class="box" draggable="true" id="box-${
+            el.title + i
+          }">
+          <ul>
+            <li>${el.title}</li>
+            <li>${el.Description}</li>
+            <li>${el.Status}</li>
+            <li>${el.Priority}</li>
+          </ul>
+        </div>
+        `;
+        });
+        document.getElementById("container-1").innerHTML = boxString;
+      };
+      render();
+      //todo nemeh
+      const addTodo = () => {
+        const titleInputValue = document.getElementById("title-input").value;
+        const descriptionInputValue =
+          document.getElementById("description-input").value;
+        const statusInputValue = document.getElementById("status-input").value;
+        const priorityInputValue =
+          document.getElementById("priority-input").value;
+        const inputObj = {
+          title: titleInputValue,
+          Description: descriptionInputValue,
+          Status: statusInputValue,
+          Priority: priorityInputValue,
+        };
+        boxArray.push(inputObj);
+        render();
+      };
+      //modal il gargah
+      const show = () => {
+        document
+          .getElementsByClassName("modalContainer")[0]
+          .classList.add("show");
+      };
+      //modal nuuh
+      const hide = () => {
+        document
+          .getElementsByClassName("modalContainer")[0]
+          .classList.remove("show");
+      };
+      //drag drop ajildag bolgoh
+      const allowDrop = (event) => {
+        event.preventDefault();
+      };
+      const drag = (event) => {
+        event.dataTransfer.setData("text", event.target.id);
+      };
+      const drop = (event) => {
+        event.preventDefault();
+        const boxId = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(boxId));
+      };
+      //modal gadna tald darahad nuugdah   ======> zasah shaardlagatai
+      // const modalContainer =
+      //     document.getElementsByClassName("modalContainer")[0];
+      //   modalContainer.addEventListener("click", () => {
+      //     modalContainer.classList.remove("show");
+      //   });
+    </script>
+  </body>
+</html>

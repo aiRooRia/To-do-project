@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css" />
+  </head>
+  <body>
+    <div class="container-01">
+      <div class="list-01">
+        <div>
+          <h3>To do</h3>
+        </div>
+        <div
+          class="reciveTodo"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <button onclick="show()" class="button-list">+ Add card</button>
+      </div>
+      <div class="modalContainer">
+        <div class="modal-mini-container flex column gap-30">
+          <h1>Add Task</h1>
+          <div>
+            <p>Title</p>
+            <input id="description" class="w-100-percent h-30" type="text" />
+          </div>
+          <div>
+            <p>Description</p>
+            <input id="inprogress" class="w-100-percent h-150" type="text" />
+          </div>
+          <div>
+            <p>Status</p>
+            <select class="w-100-percent h-30" name="" id="status">
+              <option id="inprogressOption" value="inprogress">
+                In progress
+              </option>
+              <option id="todoOption" value="todo">To do</option>
+              <option id="stuckOption" value="stuck">Stuck</option>
+              <option id="doneOption" value="done">Done</option>
+            </select>
+          </div>
+          <div>
+            <p>Priopity</p>
+            <select class="w-100-percent h-30" name="" id="priopity">
+              <option id="hightOption" value="">Hight</option>
+              <option id="meduimOption" value="">Medium</option>
+              <option id="lowOption" value="">Low</option>
+            </select>
+          </div>
+          <button onclick="addToDo()" class="button-black w-100-percent h-35">
+            Add task
+          </button>
+        </div>
+      </div>
+      <div class="list-02">
+        <div>
+          <h3>In progress</h3>
+        </div>
+        <div
+          class="reciveInprogress"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <button onclick="show()" class="button-list">+ Add card</button>
+      </div>
+      <div class="list-03">
+        <div>
+          <h3>Stuck</h3>
+        </div>
+        <div
+          class="reciveStuck"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <button onclick="show()" class="button-list">+ Add card</button>
+      </div>
+      <div class="list-04">
+        <div>
+          <h3>Done</h3>
+        </div>
+        <div
+          class="reciveDone"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        ></div>
+        <button onclick="show()" class="button-list">+ Add card</button>
+      </div>
+    </div>
+    <script src="./test.js"></script>
+  </body>
+</html>
